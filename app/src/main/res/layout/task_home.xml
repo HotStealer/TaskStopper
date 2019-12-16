@@ -84,7 +84,8 @@
                 android:background="?attr/colorPrimary"
                 android:descendantFocusability="blocksDescendants"
                 android:layout_marginRight="12dp"
-                android:layout_marginLeft="12dp">
+                android:layout_marginLeft="12dp"
+                >
 
                 <com.androstock.taskstopper.NoScrollListView
                     android:id="@+id/taskListToday"

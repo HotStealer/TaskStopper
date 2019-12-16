@@ -29,7 +29,7 @@ public class TaskHome extends AppCompatActivity {
     NoScrollListView taskListToday, taskListTomorrow, taskListUpcoming;
     NestedScrollView scrollView;
     ProgressBar loader;
-    TextView todayText,tomorrowText,upcomingText;
+    TextView todayText,tomorrowText,upcomingText, chronometer;
     ArrayList<HashMap<String, String>> todayList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> tomorrowList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> upcomingList = new ArrayList<HashMap<String, String>>();
@@ -37,6 +37,7 @@ public class TaskHome extends AppCompatActivity {
     public static String KEY_ID = "id";
     public static String KEY_TASK = "task";
     public static String KEY_DATE = "date";
+    public static String KEY_TIME = "time";
 
 
     @Override
@@ -57,11 +58,11 @@ public class TaskHome extends AppCompatActivity {
 
     }
     public void startChronometer(View v) {
-        ((Chronometer) findViewById(R.id.chronometer1)).start();
+        ((Chronometer) (TextView) findViewById(R.id.chronometer)).start();
     }
 
     public void stopChronometer(View v) {
-        ((Chronometer) findViewById(R.id.chronometer1)).stop();
+        ((Chronometer) (TextView) findViewById(R.id.chronometer)).stop();
     }
 
     public void openAddTask(View v)

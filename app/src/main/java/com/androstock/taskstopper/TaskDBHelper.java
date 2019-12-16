@@ -16,8 +16,8 @@ import java.util.Locale;
 
 public class TaskDBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "ToDoDBHelper.db";
-    public static final String CONTACTS_TABLE_NAME = "todo";
+    public static final String DATABASE_NAME = "TaskDBHelper.db";
+    public static final String CONTACTS_TABLE_NAME = "task";
 
     public TaskDBHelper(Context context)
     {
@@ -26,18 +26,18 @@ public class TaskDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // TODO Auto-generated method stub
+        // task Auto-generated method stub
 
         db.execSQL(
                 "CREATE TABLE "+CONTACTS_TABLE_NAME +
-                        "(id INTEGER PRIMARY KEY, task TEXT,timer INTEGER,dateStr INTEGER)"
+                        "(id INTEGER PRIMARY KEY, task TEXT,dateStr INTEGER, time INTEGER)"
         );
     }
 
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // TODO Auto-generated method stub
+        // task Auto-generated method stub
         db.execSQL("DROP TABLE IF EXISTS "+CONTACTS_TABLE_NAME);
         onCreate(db);
     }
